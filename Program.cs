@@ -33,14 +33,7 @@ namespace InfraMS
             
             Console.WriteLine("\n-------------After Processment Pipeline-------------");
             networkFilteredState.report();
-            serverFilteredList.report();
-
-
-
-
-
-
-
+            //serverFilteredList.report();
         }
     }
 }
