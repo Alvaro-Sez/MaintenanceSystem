@@ -1,9 +1,4 @@
-﻿using Autofac;
-using InfraMS.Application;
-using InfraMS.Application.Verification.NetworkVerification;
-using InfraMS.Data;
-using InfraMS.Domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace InfraMS
@@ -12,9 +7,7 @@ namespace InfraMS
     {
         static void Main(string[] args)
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<INetworkDataService>().As<AmazonNetworkData>();
-            
+
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Application
+namespace InfraMS.Application.Processing.ServerProcessor
 {
     internal interface IPipelineServerProcessor
     {

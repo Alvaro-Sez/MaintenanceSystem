@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Application.NetworkProcessor
+namespace InfraMS.Application.Processing.NetworkProcessor
 {
     internal interface INetworkStateManager
     {

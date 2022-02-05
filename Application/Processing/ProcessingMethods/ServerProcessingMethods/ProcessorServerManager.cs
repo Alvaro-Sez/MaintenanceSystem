@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Application.ProcessingMethods.ServerProcessingMethods
+namespace InfraMS.Application.Processing.ProcessingMethods.ServerProcessingMethods
 {
-    public class ProcessorServerManager : INetworkProcessingMethods
+    public class ProcessorServerManager : IProcessorServerMethods
     {
         
         public List<Server> ShutdownServers(IServerVerification verification, List<Server> serverList)

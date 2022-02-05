@@ -1,5 +1,4 @@
-﻿using InfraMS.Application.ProcessingMethods.ServerProcessingMethods;
-using InfraMS.Application.Verification.NetworkVerification;
+﻿using InfraMS.Application.Verification.NetworkVerification;
 using InfraMS.Domain;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Application
+namespace InfraMS.Application.Processing.NetworkProcessor
 {
     public class NetworkStateManager
     {

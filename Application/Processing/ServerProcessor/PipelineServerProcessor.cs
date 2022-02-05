@@ -1,4 +1,4 @@
-﻿using InfraMS.Application.ProcessingMethods.ServerProcessingMethods;
+﻿using InfraMS.Application.Processing.ProcessingMethods.ServerProcessingMethods;
 using InfraMS.Application.Verification.ServerVerification;
 using InfraMS.Domain;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Application
+namespace InfraMS.Application.Processing.ServerProcessor
 {
     public class PipelineServerProcessor : IPipelineServerProcessor
     {
