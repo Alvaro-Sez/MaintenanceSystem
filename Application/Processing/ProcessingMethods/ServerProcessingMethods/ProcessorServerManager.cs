@@ -45,6 +45,9 @@ namespace InfraMS.Application.Processing.ProcessingMethods.ServerProcessingMetho
             {
                 if (verification.Verificate(x) == ProcessingMethodEnum.scale)
                 {
+                    x.CPU = (int)(x.CPU * 0.75);
+                    x.Memory = (int)(x.CPU * 0.75);
+                    x.FreeRAM = x.CPU * 2;
                     x.Scaled = true;
                 }
             });

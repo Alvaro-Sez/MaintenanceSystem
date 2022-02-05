@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Data
+namespace InfraMS.Infraestructure
 {
-    public class AmazonNetworkData : INetworkDataService
+    public class AmazonNetworkService : INetworkService
     {
         public List<Server> GetServers()
         {
@@ -18,11 +18,11 @@ namespace InfraMS.Data
             {
                 Server server = new Server()
                 {
-                    CPU = rnd.Next(1, 99),
-                    Memory = rnd.Next(1, 99),
-                    BandWidth = rnd.Next(1, 99),
-                    DiskUsage = rnd.Next(1, 99),
-                    FreeRAM = rnd.Next(1, 99),
+                    CPU = rnd.Next(65, 99),
+                    Memory = rnd.Next(65, 99),
+                    BandWidth = rnd.Next(65, 99),
+                    DiskUsage = rnd.Next(65, 99),
+                    FreeRAM = rnd.Next(1, 35),
                     Type = (ServerEnum)rnd.Next(0, 2),
                     BiosUpdated = rnd.Next(0, 2) == 1 ? true : false,
                     ControllersInstalled = rnd.Next(0, 2) == 1 ? true : false,

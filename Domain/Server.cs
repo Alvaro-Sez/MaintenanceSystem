@@ -8,6 +8,7 @@ namespace InfraMS.Domain
 {
     public class Server
     {
+        public Guid Id { get; set; } = Guid.NewGuid();
         public DateTime RestartTime { get; set; }
         public DateTime ShutdownTime { get; set; }
         public int CPU { get; set; }

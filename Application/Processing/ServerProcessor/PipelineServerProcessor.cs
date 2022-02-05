@@ -12,8 +12,8 @@ namespace InfraMS.Application.Processing.ServerProcessor
     public class PipelineServerProcessor : IPipelineServerProcessor
     {
         private readonly IEnumerable<IServerVerification> _verificationList;
-        private readonly INetworkProcessingMethods _processorMethod;
-        public PipelineServerProcessor(IEnumerable<IServerVerification> verificationList, INetworkProcessingMethods processorMethods)
+        private readonly IProcessorServerMethods _processorMethod;
+        public PipelineServerProcessor(IEnumerable<IServerVerification> verificationList, IProcessorServerMethods processorMethods)
         {
             _verificationList = verificationList;
             _processorMethod = processorMethods;
@@ -22,8 +22,7 @@ namespace InfraMS.Application.Processing.ServerProcessor
         public List<Server> Filter(List<Server> serverList)
         {
             List<Server> filteredList = serverList;
-
-            foreach(IServerVerification verification in _verificationList)
+            foreach(var verification in _verificationList)
             {
                 filteredList = _processorMethod.ShutdownServers(verification, filteredList);
                 filteredList = _processorMethod.RestartServers(verification, filteredList);

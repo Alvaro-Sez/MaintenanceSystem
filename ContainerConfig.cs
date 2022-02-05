@@ -4,7 +4,7 @@ using InfraMS.Application.Processing.ProcessingMethods.ServerProcessingMethods;
 using InfraMS.Application.Processing.ServerProcessor;
 using InfraMS.Application.Verification.NetworkVerification;
 using InfraMS.Application.Verification.ServerVerification;
-using InfraMS.Data;
+using InfraMS.Infraestructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +19,9 @@ namespace InfraMS
         public static IContainer Configure()
         {
             var builder = new ContainerBuilder();
+
             /*DataService*/
-            builder.RegisterType<AmazonNetworkData>().As<INetworkDataService>();
+            builder.RegisterType<AmazonNetworkService>().As<INetworkService>();
             
             /*ServerVerifications*/
             builder.RegisterType<BIOSUpdated>().As<IServerVerification>();
@@ -35,12 +36,11 @@ namespace InfraMS
             builder.RegisterType<ProcessorServerManager>().As<IProcessorServerMethods>();
             builder.RegisterType<PipelineServerProcessor>().As<IPipelineServerProcessor>();
 
-
+            /*Network verification*/
             builder.RegisterType<NetworkVerification>().As<INetworkVerification>();
 
-
+            /*Netwok processor*/
             builder.RegisterType<NetworkStateManager>().As<INetworkStateManager>();
-            /*builder.RegisterAssemblyTypes(Assembly.Load(nameof(InfraMS.)));*/
 
             return builder.Build();
         }

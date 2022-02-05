@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InfraMS.Application.Processing.NetworkProcessor
 {
-    public class NetworkStateManager
+    public class NetworkStateManager : INetworkStateManager
     {
         private readonly INetworkVerification _networkVerifications;
         private NetworkState network = new NetworkState();

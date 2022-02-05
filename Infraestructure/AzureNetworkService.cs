@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Data
+namespace InfraMS.Infraestructure
 {
-    public class GoogleNetworkData : INetworkDataService
+    public class AzureNetworkService : INetworkService
     {
         public List<Server> GetServers()
         {

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfraMS.Data
+namespace InfraMS.Infraestructure
 {
-    public class OnPremiseNetworkData : INetworkDataService
+    public class GoogleNetworkService : INetworkService
     {
         public List<Server> GetServers()
         {

@@ -1,4 +1,4 @@
-﻿using InfraMS.Application.ProcessingMethods;
+﻿using InfraMS.Application.Processing.ProcessingMethods;
 using InfraMS.Domain;
 using System;
 using System.Collections.Generic;
